@@ -3,163 +3,256 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daly Creation — Custom laser-cut wood, Minnesota</title>
-  <meta name="description" content="Custom laser-cut wood from a Minnesota workshop. Architectural panels, signs, and commissioned pieces. You approve a proof before we cut." />
+  <title>Daly Creation — Custom laser-cut wood</title>
+  <meta name="description" content="Custom laser-cut wood from a Minnesota workshop. Panels, signs, and commissions. You approve a proof before we cut." />
   <link rel="canonical" href="https://dalycreation.com/" />
   <meta property="og:title" content="Daly Creation — Light, cut into wood." />
   <meta property="og:description" content="Custom laser-cut wood. Proof before we cut. Made in Minnesota." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dalycreation.com/" />
+  <meta property="og:image" content="https://dalycreation.com/og.jpg" />
+  <meta name="theme-color" content="#f3eee6" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=Outfit:wght@340;460;560&display=swap" rel="stylesheet" />
   <style>
-    :root { --ink:#1c1612; --ink-soft:#3d342c; --paper:#f3eee6; --line:#d4cbbd; --walnut:#6d4c34; --plaster:#f7f4ee; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Outfit,"Segoe UI",sans-serif; font-weight:340; font-size:1.125rem; line-height:1.55; }
-    img { max-width:100%; display:block; }
-    a { color:inherit; }
-    .skip { position:absolute; left:1rem; top:-4rem; background:var(--ink); color:var(--paper); padding:.6rem 1rem; z-index:20; }
-    .skip:focus { top:1rem; }
-    header { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 6vw; background:rgba(243,238,230,.92); border-bottom:1px solid var(--line); backdrop-filter:blur(8px); }
-    .mark { font-family:Fraunces,Georgia,serif; font-weight:560; letter-spacing:.04em; text-decoration:none; font-size:1.15rem; }
-    nav { display:flex; gap:1.4rem; align-items:center; }
-    nav a { text-decoration:none; font-size:.98rem; }
-    .nav-cta { border:1px solid var(--ink); padding:.45rem .85rem; text-decoration:none; }
-    .hero { display:grid; grid-template-columns:1.05fr .95fr; min-height:86vh; border-bottom:1px solid var(--line); }
-    .hero-copy { padding:8vh 6vw 7vh; display:flex; flex-direction:column; justify-content:flex-end; }
-    .eyebrow { letter-spacing:.16em; text-transform:uppercase; font-size:.78rem; font-weight:560; color:var(--walnut); margin:0 0 1.2rem; }
-    h1 { font-family:Fraunces,Georgia,serif; font-weight:460; font-size:clamp(3.1rem,6vw,5.6rem); line-height:.92; letter-spacing:-.03em; margin:0 0 1.2rem; max-width:9ch; }
-    .lede { max-width:34ch; margin:0 0 2rem; font-size:1.25rem; color:var(--ink-soft); }
-    .actions { display:flex; gap:.8rem; flex-wrap:wrap; }
-    .btn { display:inline-block; background:var(--ink); color:var(--paper); text-decoration:none; padding:.9rem 1.2rem; min-height:48px; border:1px solid var(--ink); }
-    .btn.ghost { background:transparent; color:var(--ink); }
-    .hero-photo { position:relative; min-height:420px; background:#cbbba6; }
-    .hero-photo img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
-    .caption { position:absolute; left:1rem; bottom:1rem; right:1rem; color:#f7f4ee; font-size:.85rem; text-shadow:0 1px 8px rgba(0,0,0,.45); }
-    .band { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--line); }
-    .band article { padding:1.6rem 1.6rem; border-right:1px solid var(--line); }
-    .band article:first-child { padding-left:6vw; }
-    .band article:last-child { border-right:0; }
-    .band h2 { font-family:Fraunces,Georgia,serif; font-weight:560; font-size:1.35rem; margin:0 0 .35rem; }
-    .band p { margin:0; color:var(--ink-soft); }
-    section { padding:7vh 6vw; }
-    .section-head { max-width:40rem; margin-bottom:2.5rem; }
-    h2.display { font-family:Fraunces,Georgia,serif; font-weight:460; font-size:clamp(2.2rem,4vw,3.4rem); line-height:1; letter-spacing:-.02em; margin:0 0 .8rem; }
-    .work { display:grid; grid-template-columns:1.15fr .85fr; border-top:1px solid var(--line); }
-    .work article { padding:2rem 0 2.5rem; border-bottom:1px solid var(--line); }
-    .work article:nth-child(odd) { padding-right:2.5rem; border-right:1px solid var(--line); }
-    .work article:nth-child(even) { padding-left:2.5rem; }
-    .work img { width:100%; height:280px; object-fit:cover; margin-bottom:1rem; }
-    .work h3 { font-family:Fraunces,Georgia,serif; font-size:1.8rem; font-weight:560; margin:0 0 .4rem; }
-    .work p { margin:0; max-width:42ch; color:var(--ink-soft); }
-    .span-photo { grid-column:1 / -1; border-bottom:1px solid var(--line); }
-    .span-photo img { width:100%; height:min(68vh,640px); object-fit:cover; }
-    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; padding:0; margin:0; }
-    .steps li { list-style:none; border-top:2px solid var(--ink); padding-top:.8rem; }
-    .steps strong { display:block; font-family:Fraunces,Georgia,serif; font-size:1.35rem; font-weight:560; margin-bottom:.35rem; }
-    .commission { background:var(--plaster); border-top:1px solid var(--line); display:grid; grid-template-columns:.8fr 1.2fr; gap:3rem; }
-    form { display:grid; gap:.9rem; }
-    label { display:grid; gap:.35rem; font-size:.95rem; font-weight:560; }
-    input, select, textarea { font:inherit; color:var(--ink); background:#fff; border:1px solid #c9beae; padding:.75rem .8rem; min-height:48px; width:100%; }
-    textarea { min-height:140px; resize:vertical; }
-    button.btn { cursor:pointer; font:inherit; width:fit-content; }
-    .note { font-size:.95rem; color:var(--ink-soft); }
-    footer { padding:2rem 6vw 3rem; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; color:var(--ink-soft); font-size:.95rem; }
-    @media (max-width:860px) {
-      nav .hide-sm { display:none; }
-      .hero, .band, .work, .commission, .steps { grid-template-columns:1fr; }
-      .band article, .band article:first-child { padding:1.2rem 6vw; border-right:0; border-bottom:1px solid var(--line); }
-      .work article, .work article:nth-child(odd), .work article:nth-child(even) { padding:1.4rem 0; border-right:0; }
-      .hero-photo { min-height:320px; }
-      .hero-photo img { position:static; height:320px; }
+    :root {
+      --paper: #f3eee6;
+      --ink: #1c1612;
+      --muted: #3d342c;
+      --walnut: #6d4c34;
+      --line: #d4cbbd;
+      --plaster: #f7f4ee;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Outfit, "Segoe UI", sans-serif;
+      font-weight: 360;
+      line-height: 1.55;
+      font-size: 1.125rem;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3, .display { font-family: Fraunces, Georgia, serif; font-weight: 460; }
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.5rem 1rem;
+      z-index: 20;
+    }
+    .skip:focus { top: 1rem; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 95%, transparent);
+      backdrop-filter: blur(6px);
+      padding: 0.75rem 1.25rem;
+    }
+    .brand { font-family: Fraunces, Georgia, serif; font-size: 1.125rem; font-weight: 560; letter-spacing: 0.02em; text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 1.25rem; }
+    nav a { text-underline-offset: 4px; }
+    nav a:hover { text-decoration: underline; }
+    .nav-quiet { display: none; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: 0 1.25rem;
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      font: inherit;
+      cursor: pointer;
+    }
+    .btn-solid { background: var(--ink); color: var(--paper); }
+    .hero { display: grid; min-height: 86vh; border-bottom: 1px solid var(--line); }
+    .hero-copy { display: flex; flex-direction: column; justify-content: flex-end; padding: 4rem 1.25rem; }
+    .kicker { margin: 0 0 1.25rem; font-size: 0.75rem; font-weight: 560; letter-spacing: 0.14em; text-transform: uppercase; color: var(--walnut); }
+    h1 { margin: 0 0 1.25rem; max-width: 9ch; font-size: 3.5rem; font-weight: 460; line-height: 1; letter-spacing: -0.02em; }
+    .lede { margin: 0 0 2rem; max-width: 28rem; font-size: 1.25rem; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .hero-figure { position: relative; min-height: 20rem; background: var(--line); margin: 0; }
+    .hero-figure img { width: 100%; height: 100%; min-height: 20rem; object-fit: cover; }
+    figcaption {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      left: 1rem;
+      color: var(--plaster);
+      font-size: 0.875rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+    }
+    .promises { display: grid; border-bottom: 1px solid var(--line); }
+    .promises article { padding: 1.5rem 1.25rem; border-bottom: 1px solid var(--line); }
+    .promises h2 { margin: 0; font-size: 1.5rem; font-weight: 560; }
+    .promises p, .muted { color: var(--muted); }
+    .section { padding: 4rem 1.25rem; }
+    .section h2 { margin: 0 0 0.75rem; max-width: 36rem; font-size: 2.5rem; font-weight: 460; line-height: 1; }
+    .section > .muted { margin: 0 0 2.5rem; max-width: 36rem; }
+    .work-grid { display: grid; border-top: 1px solid var(--line); }
+    .work-grid article { border-bottom: 1px solid var(--line); padding: 2rem 0; }
+    .work-grid img { width: 100%; height: 18rem; object-fit: cover; margin-bottom: 1rem; }
+    .work-grid h3 { margin: 0; font-size: 1.75rem; font-weight: 560; }
+    .shop { padding: 0; }
+    .shop img { width: 100%; height: 24rem; object-fit: cover; margin: 0; }
+    ol.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
+    ol.steps li { border-top: 2px solid var(--ink); padding-top: 0.75rem; }
+    ol.steps strong { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.5rem; font-weight: 560; }
+    .commission { display: grid; gap: 2.5rem; border-top: 1px solid var(--line); background: var(--plaster); padding: 4rem 1.25rem; }
+    form { display: grid; gap: 1rem; }
+    label { display: grid; gap: 0.25rem; font-size: 0.875rem; font-weight: 560; }
+    input, select, textarea {
+      min-height: 2.75rem;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0.5rem 0.75rem;
+      font: inherit;
+      font-weight: 400;
+    }
+    textarea { min-height: 9rem; }
+    .note { margin: 0; font-size: 0.875rem; color: var(--muted); }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-top: 1px solid var(--line);
+      padding: 2rem 1.25rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    @media (min-width: 640px) {
+      header, .hero-copy, .promises article, .section, .commission, footer { padding-left: 2.5rem; padding-right: 2.5rem; }
+      h1 { font-size: 4.5rem; }
+      .section h2, .commission h2 { font-size: 3rem; }
+      ol.steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 768px) {
+      .nav-quiet { display: inline; }
+      .promises { grid-template-columns: 1fr 1fr 1fr; }
+      .promises article { border-bottom: 0; border-right: 1px solid var(--line); }
+      .promises article:last-child { border-right: 0; }
+    }
+    @media (min-width: 1024px) {
+      .hero { grid-template-columns: 1fr 1fr; }
+      .hero-figure img { position: absolute; inset: 0; }
+      .work-grid { grid-template-columns: 1fr 1fr; }
+      .work-grid article:nth-child(odd) { padding-right: 2.5rem; }
+      .work-grid article:nth-child(even) { padding-left: 2.5rem; }
+      .work-grid article:nth-child(1),
+      .work-grid article:nth-child(4) { border-right: 1px solid var(--line); }
+      .span-2 { grid-column: 1 / -1; padding-left: 0; padding-right: 0; }
+      ol.steps { grid-template-columns: repeat(4, 1fr); }
+      .commission { grid-template-columns: 2fr 3fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header>
-    <a class="mark" href="#top">Daly Creation</a>
+    <a class="brand" href="#top">Daly Creation</a>
     <nav>
-      <a class="hide-sm" href="#work">Work</a>
-      <a class="hide-sm" href="#made">How it’s made</a>
-      <a class="nav-cta" href="#commission">Start a piece</a>
+      <a class="nav-quiet" href="#work">Work</a>
+      <a class="nav-quiet" href="#made">How it’s made</a>
+      <a class="btn" href="#commission">Start a piece</a>
     </nav>
   </header>
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">Minnesota workshop · custom laser-cut wood</p>
+        <p class="kicker">Minnesota workshop · dalycreation.com</p>
         <h1>Light, cut into wood.</h1>
         <p class="lede">Architectural panels, signs, and one-off pieces. Drawn for the job. Proved on screen. Cut only after you say yes.</p>
         <div class="actions">
-          <a class="btn" href="#commission">Start a piece</a>
-          <a class="btn ghost" href="#work">See the work</a>
+          <a class="btn btn-solid" href="#commission">Start a piece</a>
+          <a class="btn" href="#work">See the work</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <img src="images/panel.jpg" alt="Walnut laser-cut geometric panel casting a grid of light on a workbench" />
-        <p class="caption">Study of the cut. Your piece is drawn for the job, then proved before we cut.</p>
-      </div>
+      <figure class="hero-figure">
+        <img src="/work/panel.jpg" alt="Walnut laser-cut geometric panel casting a grid of light on a workbench" />
+        <figcaption>Study of the cut. Your piece is drawn for the job, then proved before we cut.</figcaption>
+      </figure>
     </section>
-    <div class="band">
-      <article><h2>Proof first</h2><p>You see the drawing before a single line is burned. No surprise piece.</p></article>
-      <article><h2>Cut here</h2><p>Designed, cut, checked, and packed in a Minnesota workshop.</p></article>
-      <article><h2>One at a time</h2><p>Custom work, not a warehouse. Most pieces leave a few days after approval.</p></article>
-    </div>
-    <section id="work">
-      <div class="section-head">
-        <p class="eyebrow">The work</p>
-        <h2 class="display">Wood that holds a line.</h2>
-        <p>Prairie geometry, clean lettering, and commissioned cuts. Solid wood and cabinet birch. Grain stays visible. The cut does the decorating.</p>
-      </div>
-      <div class="work">
+    <section class="promises">
+      <article>
+        <h2>Proof first</h2>
+        <p>You see the drawing before a single line is burned.</p>
+      </article>
+      <article>
+        <h2>Cut here</h2>
+        <p>Designed, cut, checked, and packed in Minnesota.</p>
+      </article>
+      <article>
+        <h2>One at a time</h2>
+        <p>Most pieces leave a few days after you approve the proof.</p>
+      </article>
+    </section>
+    <section class="section" id="work">
+      <p class="kicker">The work</p>
+      <h2>Wood that holds a line.</h2>
+      <p class="muted">Prairie geometry, clean lettering, and commissioned cuts. Grain stays visible. The cut does the decorating.</p>
+      <div class="work-grid">
         <article>
-          <img src="images/screen.jpg" alt="Layered birch and walnut geometric screen casting a long shadow on plaster" />
-          <h3>Panels &amp; screens</h3>
-          <p>Horizontal screens, wall panels, and light-catching fretwork sized to a room, a window, or a gift.</p>
+          <img src="/work/screen.jpg" alt="Layered birch and walnut geometric screen casting a long shadow on plaster" />
+          <h3>Panels & screens</h3>
+          <p class="muted">Horizontal screens, wall panels, and light-catching fretwork sized to a room, a window, or a gift.</p>
         </article>
         <article>
-          <img src="images/sign.jpg" alt="Maple house-number plaque with the numerals 1427 cut through the face" />
-          <h3>Signs &amp; plates</h3>
-          <p>House numbers, desk plates, shop signs, and names. Lettering cut through or engraved, never printed on.</p>
+          <img src="/work/sign.jpg" alt="Maple house-number plaque with the numerals 1427 cut through the face" />
+          <h3>Signs & plates</h3>
+          <p class="muted">House numbers, desk plates, and names. Lettering cut through or engraved, never printed on.</p>
         </article>
-        <article class="span-photo">
-          <img src="images/shop.jpg" alt="Two people in a woodshop reviewing a laser-cut landscape panel on the machine bed" />
+        <article class="shop span-2">
+          <img src="/work/shop.jpg" alt="Two people in a woodshop reviewing a laser-cut landscape panel on the machine bed" />
         </article>
         <article>
           <h3>Commissions</h3>
-          <p>A drawing you already have, a place you want remembered, a piece for a business or a house. Tell us the size and the wood. We send a proof and a price before we cut.</p>
+          <p class="muted">A drawing you already have, a place you want remembered, a piece for a business or a house. We send a proof and a price before we cut.</p>
         </article>
         <article>
           <h3>What we don’t do</h3>
-          <p>No dropship blanks. No catalog of identical stock. If it cannot be proved first, we don’t take it.</p>
+          <p class="muted">No dropship blanks. No catalog of identical stock. If it cannot be proved first, we don’t take it.</p>
         </article>
       </div>
     </section>
-    <section id="made">
-      <div class="section-head">
-        <p class="eyebrow">How a piece is made</p>
-        <h2 class="display">Four steps. Nothing hidden.</h2>
-      </div>
+    <section class="section" id="made">
+      <p class="kicker">How a piece is made</p>
+      <h2>Four steps. Nothing hidden.</h2>
       <ol class="steps">
-        <li><strong>Tell us the job</strong> Size, wood, words, and where it will live.</li>
-        <li><strong>Approve the proof</strong> A drawing of the actual cut. Change it until it is right.</li>
-        <li><strong>We cut it</strong> Laser-cut or engraved in the Minnesota shop, then checked by hand.</li>
-        <li><strong>It ships</strong> Packed for the grain, not for a warehouse shelf.</li>
+        <li><strong>Tell us the job</strong><span class="muted">Size, wood, words, and where it will live.</span></li>
+        <li><strong>Approve the proof</strong><span class="muted">A drawing of the actual cut. Change it until it is right.</span></li>
+        <li><strong>We cut it</strong><span class="muted">Laser-cut or engraved in the shop, then checked by hand.</span></li>
+        <li><strong>It ships</strong><span class="muted">Packed for the grain, not for a warehouse shelf.</span></li>
       </ol>
     </section>
     <section class="commission" id="commission">
       <div>
-        <p class="eyebrow">Commission</p>
-        <h2 class="display">Start a piece.</h2>
-        <p>Send the job. We reply with questions, a proof path, and a price before any wood is cut.</p>
-        <p class="note">Opens your email with the details filled in. Nothing is charged on this page.</p>
+        <p class="kicker">Commission</p>
+        <h2>Start a piece.</h2>
+        <p class="muted">Send the job to hello@dalycreation.com. We reply with a proof path and a price before any wood is cut. Nothing is charged on this page.</p>
       </div>
-      <form id="order">
-        <label>Name <input name="name" required autocomplete="name" /></label>
-        <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+      <form id="job">
+        <label>Name<input name="name" required autocomplete="name" /></label>
+        <label>Email<input name="email" type="email" required autocomplete="email" /></label>
         <label>What do you want
           <select name="kind">
             <option>Panel or screen</option>
@@ -169,22 +262,34 @@
             <option>Not sure yet</option>
           </select>
         </label>
-        <label>Size, wood, words <textarea name="detail" required placeholder="Example: 24 inch walnut screen for a stair landing. Horizontal prairie lines. No text."></textarea></label>
-        <button class="btn" type="submit">Send the job</button>
+        <label>Size, wood, words
+          <textarea name="detail" required placeholder="Example: 24 inch walnut screen for a stair landing. Horizontal prairie lines. No text."></textarea>
+        </label>
+        <button class="btn btn-solid" type="submit">Send the job</button>
+        <p class="note" id="sent" hidden>Your email app should be open with the job filled in.</p>
       </form>
     </section>
   </main>
   <footer>
     <span>Daly Creation · Minnesota</span>
-    <span>Custom laser-cut wood · proof before we cut</span>
+    <span>dalycreation.com · proof before we cut</span>
   </footer>
   <script>
-    const ORDER_EMAIL = "hello@dalycreation.com";
-    document.getElementById("order").addEventListener("submit", function (event) {
+    document.getElementById("job").addEventListener("submit", function (event) {
       event.preventDefault();
-      const data = new FormData(event.target);
-      const body = ["Name: " + data.get("name"), "Email: " + data.get("email"), "Piece: " + data.get("kind"), "", data.get("detail")].join("\n");
-      window.location.href = "mailto:" + ORDER_EMAIL + "?subject=" + encodeURIComponent("Daly Creation commission — " + data.get("kind")) + "&body=" + encodeURIComponent(body);
+      var data = new FormData(event.currentTarget);
+      var kind = String(data.get("kind") || "Commission");
+      var body = [
+        "Name: " + data.get("name"),
+        "Email: " + data.get("email"),
+        "Piece: " + kind,
+        "",
+        String(data.get("detail") || "")
+      ].join("\n");
+      window.location.href = "mailto:hello@dalycreation.com?subject=" +
+        encodeURIComponent("Daly Creation commission — " + kind) +
+        "&body=" + encodeURIComponent(body);
+      document.getElementById("sent").hidden = false;
     });
   </script>
 </body>

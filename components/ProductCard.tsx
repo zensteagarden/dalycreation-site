@@ -5,25 +5,14 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="product-card">
       <Link href={`/shop/${product.slug}`} className="thumb">
-        <img
-          src={`/images/${product.slug}.svg`}
-          alt={`Placeholder photo for ${product.name}. Real product photo coming soon.`}
-          width={800}
-          height={600}
-        />
+        <img src={product.image} alt={product.imageAlt} width={800} height={600} style={{ objectFit: "cover" }} />
       </Link>
       <div className="product-body">
-        <div>
-          <span className="pill">Photo placeholder</span>
-        </div>
         <h2>
           <Link href={`/shop/${product.slug}`}>{product.name}</Link>
         </h2>
         <p>{product.shortDescription}</p>
-        <p className="price">
-          {formatPrice(product.priceCents)}{" "}
-          <span className="price-note">(price placeholder)</span>
-        </p>
+        <p className="price">{formatPrice(product.priceCents)}</p>
         <Link className="btn btn-secondary" href={`/shop/${product.slug}`}>
           View details
         </Link>

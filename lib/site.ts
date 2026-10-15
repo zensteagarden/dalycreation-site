@@ -1,14 +1,13 @@
 export const site = {
   name: "Daly Creation",
   tagline: "Custom laser-cut wood, made in Minnesota",
-  email: "info@dalycreation.com",
+  email: "hello@dalycreation.com",
   location: "Minnesota",
   url: "https://dalycreation.com",
   /**
    * Stripe Checkout wiring.
    * Set STRIPE_SECRET_KEY (test mode preferred until ready) and optionally
-   * add stripePriceId on each product in lib/products.ts.
-   * Buy buttons call /api/checkout which uses these env vars.
+   * Buy buttons use Stripe Payment Links (buyUrl in lib/products.ts).
    */
   stripe: {
     configured: Boolean(

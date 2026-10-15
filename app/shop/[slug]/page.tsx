@@ -30,16 +30,7 @@ export default async function ProductPage({ params }: Props) {
     <section className="section">
       <div className="wrap product-layout">
         <div className="product-media">
-          <img
-            src={`/images/${product.slug}.svg`}
-            alt={`Placeholder photo for ${product.name}. Real product photo needed.`}
-            width={800}
-            height={600}
-          />
-          <p className="price-note" style={{ marginTop: "0.5rem" }}>
-            <span className="pill">Photo placeholder</span> — replace with a
-            real photo before advertising this product.
-          </p>
+          <img src={product.image} alt={product.imageAlt} width={800} height={600} />
         </div>
         <div>
           <p style={{ margin: 0, color: "var(--muted)" }}>
@@ -55,8 +46,7 @@ export default async function ProductPage({ params }: Props) {
             {product.name}
           </h1>
           <p className="price">
-            {formatPrice(product.priceCents)}{" "}
-            <span className="price-note">(price placeholder)</span>
+            {formatPrice(product.priceCents)}
           </p>
           <p>{product.description}</p>
           <ul>
@@ -65,7 +55,7 @@ export default async function ProductPage({ params }: Props) {
             ))}
           </ul>
           <div style={{ display: "grid", gap: "0.75rem", marginTop: "1.25rem" }}>
-            <BuyButton slug={product.slug} name={product.name} />
+            <BuyButton product={product} />
             <Link className="btn btn-secondary" href="/custom">
               Request a custom version
             </Link>

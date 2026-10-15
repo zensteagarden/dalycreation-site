@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "Where do you ship?",
-    a: "We ship from Minnesota. Shipping cost and timing depend on size and destination. Ask when you order, or see the Shipping page for the current outline.",
+    a: "We ship from Minnesota to US addresses. Shop items ship for a flat $6. Custom pieces: we tell you the shipping cost with your quote.",
   },
   {
     q: "Can I buy something that is not in the shop?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Are the prices on the site final?",
-    a: "Not yet. Listed prices are placeholders until the shop confirms them. Custom quotes are priced after we understand the job.",
+    a: "Yes. Coasters and gifts in the shop have set prices and ship in the US for $6. Custom pieces are priced after we understand the job.",
   },
   {
     q: "What woods do you use?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "How do I pay?",
-    a: "Stripe Checkout will be available on product pages once keys and prices are set. Until then, pay by arrangement after you approve the proof — we will tell you how in our reply.",
+    a: "Shop items: press Buy now and pay securely with Stripe. Custom pieces: we send a proof and price first, then tell you how to pay.",
   },
 ];
 

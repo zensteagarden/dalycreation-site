@@ -31,7 +31,7 @@ function buildMailto(data: Required<Pick<QuoteBody, "name" | "email" | "kind" | 
 
 /**
  * Quote intake:
- * 1) If RESEND_API_KEY + QUOTE_TO_EMAIL are set, email info@dalycreation.com via Resend.
+ * 1) If RESEND_API_KEY + QUOTE_TO_EMAIL are set, email hello@dalycreation.com via Resend.
  * 2) Always return a mailto fallback so the customer can still send.
  * 3) Log a redacted summary server-side for debugging (no secrets).
  */
@@ -118,7 +118,7 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // Working fallback: open customer's mail client addressed to info@
+    // Working fallback: open customer's mail client addressed to hello@
     return NextResponse.json({
       message: `Opening your email app to send this to ${site.email}. If nothing opens, copy the details and email us directly. To enable server email later, set RESEND_API_KEY (and optional QUOTE_FROM_EMAIL) in Vercel.`,
       emailed: false,

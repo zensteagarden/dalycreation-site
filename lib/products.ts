@@ -3,125 +3,74 @@ export type Product = {
   name: string;
   shortDescription: string;
   description: string;
-  category: "panels" | "signs" | "gifts" | "plates";
-  /** Placeholder price in USD cents — family must confirm before going live */
-  priceCents: number;
-  pricePlaceholder: true;
-  photoPlaceholder: true;
-  photoLabel: string;
+  /** Price in USD cents. Null means custom quote. */
+  priceCents: number | null;
+  image: string;
+  imageAlt: string;
   details: string[];
-  /** Optional Stripe Price ID — leave empty until configured */
-  stripePriceId?: string;
+  /** Stripe Payment Link (DC account). Missing means quote only. */
+  buyUrl?: string;
 };
+
+export const SHIPPING_CENTS = 600;
 
 export const products: Product[] = [
   {
-    slug: "prairie-panel-small",
-    name: "Prairie panel — small",
-    shortDescription: "Laser-cut wood screen for a window ledge or shelf.",
+    slug: "tree-of-life-coasters",
+    name: "Gratitude Tree coaster set",
+    shortDescription: "Engraved wood coasters with a tree of life design.",
     description:
-      "A horizontal fretwork panel with a prairie-style pattern. Sized for a shelf, window ledge, or as a wall accent. Grain stays visible; the cut does the decorating.",
-    category: "panels",
-    priceCents: 6500,
-    pricePlaceholder: true,
-    photoPlaceholder: true,
-    photoLabel: "Placeholder: small prairie panel photo",
-    details: [
-      "Approx. 12 × 6 in (placeholder size — confirm before selling)",
-      "Baltic birch or similar plywood (wood choice confirmed at order)",
-      "Proof sent before cutting",
-      "Made in Minnesota",
-    ],
+      "A set of wood coasters engraved with a gratitude tree of life. Good for your own table or as a gift.",
+    priceCents: 2400,
+    image: "/images/tree-of-life-coasters.jpg",
+    imageAlt: "Round wood coasters engraved with a tree of life and the word Gratitude.",
+    details: ["Set of 4 coasters", "Laser-engraved wood", "Made in Minnesota", "US shipping $6"],
+    buyUrl: "https://buy.stripe.com/6oU9AS54g1St11h2Mu5ZC00",
   },
   {
-    slug: "prairie-panel-medium",
-    name: "Prairie panel — medium",
-    shortDescription: "Room-scale laser-cut screen or wall panel.",
-    description:
-      "A larger prairie-geometry panel for a wall, divider, or window. Drawn for the job, proved on screen, cut only after you approve.",
-    category: "panels",
-    priceCents: 14500,
-    pricePlaceholder: true,
-    photoPlaceholder: true,
-    photoLabel: "Placeholder: medium prairie panel photo",
-    details: [
-      "Approx. 24 × 12 in (placeholder size — confirm before selling)",
-      "Wood choice confirmed at order",
-      "Proof sent before cutting",
-      "Made in Minnesota",
-    ],
+    slug: "owl-coasters",
+    name: "Owl coaster set",
+    shortDescription: "Engraved wood coasters with an owl design.",
+    description: "A set of wood coasters engraved with an owl. A friendly gift for owl fans.",
+    priceCents: 2600,
+    image: "/images/owl-coasters.jpg",
+    imageAlt: "Wood coasters engraved with an owl design.",
+    details: ["Coaster set", "Laser-engraved wood", "Made in Minnesota", "US shipping $6"],
+    buyUrl: "https://buy.stripe.com/6oUaEWcwI1St5hx1Iq5ZC01",
   },
   {
-    slug: "house-number-plaque",
-    name: "House number plaque",
-    shortDescription: "Cut-through or engraved house numbers on wood.",
+    slug: "turquoise-gratitude-circle",
+    name: "Turquoise Gratitude circle",
+    shortDescription: "Engraved wood circle with turquoise inlay.",
     description:
-      "House numbers cut through or engraved into wood. Lettering is cut or burned — never printed on. You approve a proof with your exact numbers and style before we cut.",
-    category: "signs",
-    priceCents: 4500,
-    pricePlaceholder: true,
-    photoPlaceholder: true,
-    photoLabel: "Placeholder: house number plaque photo",
-    details: [
-      "Your numbers, your size (tell us in the order notes)",
-      "Cut-through or engraved lettering",
-      "Proof sent before cutting",
-      "Made in Minnesota",
-    ],
+      "A round wood piece engraved with Gratitude and filled with turquoise inlay. Hang it or stand it on a shelf.",
+    priceCents: 5500,
+    image: "/images/turquoise-gratitude-circle.jpg",
+    imageAlt: "Round wood piece with the word Gratitude and turquoise inlay.",
+    details: ["Engraved wood with turquoise inlay", "Made in Minnesota", "US shipping $6"],
+    buyUrl: "https://buy.stripe.com/28E14mgMYgNneS75YG5ZC02",
   },
   {
-    slug: "desk-name-plate",
-    name: "Desk name plate",
-    shortDescription: "Clean lettering for a desk or office door.",
+    slug: "led-light-sign",
+    name: "Custom LED light sign",
+    shortDescription: "Your words or design on a lit wood sign. Custom quote.",
     description:
-      "A wood name plate with clean cut or engraved lettering. Good for a desk, office door, or gift. You pick the name and we send a proof first.",
-    category: "plates",
-    priceCents: 3500,
-    pricePlaceholder: true,
-    photoPlaceholder: true,
-    photoLabel: "Placeholder: desk name plate photo",
-    details: [
-      "Custom name or title text",
-      "Approx. 8 × 2 in (placeholder size — confirm)",
-      "Proof sent before cutting",
-      "Made in Minnesota",
-    ],
+      "An engraved sign on a lit wood base. Tell us the words or design you want and we send a proof and price before we make it.",
+    priceCents: null,
+    image: "/images/gratitude-square.jpg",
+    imageAlt: "Example of Daly Creation engraved work: a square Gratitude design.",
+    details: ["Your words or design", "Proof and price before we make it", "Made in Minnesota"],
   },
   {
-    slug: "engraved-gift-box",
-    name: "Engraved gift piece",
-    shortDescription: "A small engraved wood gift with a short message.",
+    slug: "cutting-board",
+    name: "Custom cutting board",
+    shortDescription: "Engraved wood cutting board. Custom quote.",
     description:
-      "A small engraved wood piece for a gift — name, date, or short message. We send a proof of the engraving before anything is cut.",
-    category: "gifts",
-    priceCents: 2800,
-    pricePlaceholder: true,
-    photoPlaceholder: true,
-    photoLabel: "Placeholder: engraved gift photo",
-    details: [
-      "Short custom text (name, date, or message)",
-      "Size options confirmed at order",
-      "Proof sent before cutting",
-      "Made in Minnesota",
-    ],
-  },
-  {
-    slug: "business-sign-small",
-    name: "Business sign — small",
-    shortDescription: "Wood sign for a shop door, booth, or desk.",
-    description:
-      "A small business or studio sign cut or engraved in wood. Bring your wording (and a logo file if you have one). Proof and price before we cut.",
-    category: "signs",
-    priceCents: 8500,
-    pricePlaceholder: true,
-    photoPlaceholder: true,
-    photoLabel: "Placeholder: small business sign photo",
-    details: [
-      "Custom business name / wording",
-      "Logo file welcome (vector preferred)",
-      "Proof and price before cutting",
-      "Made in Minnesota",
-    ],
+      "A wood cutting board engraved with a name, date, or design. We send a proof and price first.",
+    priceCents: null,
+    image: "/images/owl-coasters-2.jpg",
+    imageAlt: "Example of Daly Creation engraved wood work.",
+    details: ["Name, date, or design", "Proof and price before we make it", "Made in Minnesota"],
   },
 ];
 
@@ -129,9 +78,7 @@ export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
 
-export function formatPrice(cents: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(cents / 100);
+export function formatPrice(cents: number | null): string {
+  if (cents == null) return "Custom quote";
+  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(cents / 100);
 }

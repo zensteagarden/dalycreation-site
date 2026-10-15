@@ -10,10 +10,6 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div className="wrap">
-          <p className="banner-note" style={{ marginBottom: "1.25rem" }}>
-            Prices and product photos on this site are placeholders until the
-            shop confirms them. You can still request a custom quote anytime.
-          </p>
           <h1>Light, cut into wood.</h1>
           <p className="lede">
             Architectural panels, signs, and one-off pieces. Drawn for the job.
@@ -53,7 +49,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="wrap">
-          <h2>Starter products</h2>
+          <h2>Ready to buy</h2>
           <p style={{ color: "var(--muted)", marginTop: 0 }}>
             Clear starting points. Every piece can still be customized.
           </p>

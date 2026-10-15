@@ -53,23 +53,23 @@ export const products: Product[] = [
   {
     slug: "led-light-sign",
     name: "Custom LED light sign",
-    shortDescription: "Your words or design on a lit wood sign. Custom quote.",
+    shortDescription: "Your name, logo, or design on a glowing LED sign. Custom quote.",
     description:
-      "An engraved sign on a lit wood base. Tell us the words or design you want and we send a proof and price before we make it.",
+      "A clear acrylic panel engraved with your words, name, or logo. It sits on an LED base that lights up the design. Good for a desk, shop counter, or night light. Tell us what you want and we send a proof and price before we make it.",
     priceCents: null,
-    image: "/images/gratitude-square.jpg",
-    imageAlt: "Example of Daly Creation engraved work: a square Gratitude design.",
-    details: ["Your words or design", "Proof and price before we make it", "Made in Minnesota"],
+    image: "/images/led-sign.jpg",
+    imageAlt: "Clear acrylic LED sign on a black base, glowing blue with a heart and the words Your Name or Logo Here.",
+    details: ["Your name, logo, or design", "Clear acrylic on a lit base", "Proof and price before we make it", "Made in Minnesota"],
   },
   {
     slug: "cutting-board",
-    name: "Custom cutting board",
-    shortDescription: "Engraved wood cutting board. Custom quote.",
+    name: "Laser engraved cutting board",
+    shortDescription: "Wood cutting board engraved with a name, date, or design. Custom quote.",
     description:
-      "A wood cutting board engraved with a name, date, or design. We send a proof and price first.",
+      "A wood cutting board laser engraved with a family name, monogram, date, or design. A good wedding, housewarming, or holiday gift. We send a proof and price first.",
     priceCents: null,
-    image: "/images/owl-coasters-2.jpg",
-    imageAlt: "Example of Daly Creation engraved wood work.",
+    image: "/images/cutting-board.jpg",
+    imageAlt: "Wood cutting board engraved with a monogram M, the words The Millers, and Est. 2026.",
     details: ["Name, date, or design", "Proof and price before we make it", "Made in Minnesota"],
   },
 ];

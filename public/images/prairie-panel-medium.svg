@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Placeholder photo for Prairie panel — medium">
+  <rect width="800" height="600" fill="#2c2419"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#c4a574" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="400" y="280" text-anchor="middle" fill="#f5efe6" font-family="Georgia, serif" font-size="28">Photo placeholder</text>
+  <text x="400" y="330" text-anchor="middle" fill="#c4a574" font-family="system-ui, sans-serif" font-size="18">Prairie panel — medium</text>
+  <text x="400" y="370" text-anchor="middle" fill="#a89880" font-family="system-ui, sans-serif" font-size="14">Replace with real product photo</text>
+</svg>

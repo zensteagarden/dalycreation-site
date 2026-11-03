@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "../../../lib/seo";
+import { JsonLd } from "../../../components/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduct, formatPrice, products } from "../../../lib/products";
@@ -14,11 +16,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProduct(slug);
-  if (!product) return { title: "Product" };
-  return {
+  if (!product) notFound();
+  return pageMetadata({
     title: product.name,
-    description: product.shortDescription,
-  };
+    description: `${product.shortDescription} Made in Minnesota. ${product.priceCents === null ? "Request a proof and price before we make it." : "View details and order from Daly Creation."}`,
+    path: `/shop/${product.slug}`,
+    image: product.image,
+    imageAlt: product.imageAlt,
+  });
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -28,6 +33,33 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <section className="section">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
+          { "@type": "ListItem", position: 2, name: "Shop", item: `${site.url}/shop` },
+          { "@type": "ListItem", position: 3, name: product.name, item: `${site.url}/shop/${product.slug}` },
+        ],
+      }} />
+      {product.priceCents !== null && product.buyUrl ? (
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: product.name,
+          description: product.description,
+          image: new URL(product.image, site.url).href,
+          url: `${site.url}/shop/${product.slug}`,
+          brand: { "@type": "Brand", name: site.name },
+          offers: {
+            "@type": "Offer",
+            url: `${site.url}/shop/${product.slug}`,
+            price: (product.priceCents / 100).toFixed(2),
+            priceCurrency: "USD",
+            seller: { "@type": "Organization", name: site.name, url: site.url },
+          },
+        }} />
+      ) : null}
       <div className="wrap product-layout">
         <div className="product-media">
           <img src={product.image} alt={product.imageAlt} width={800} height={600} />

@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../lib/seo";
 import { QuoteForm } from "../../components/QuoteForm";
 import { site } from "../../lib/site";
 
-export const metadata: Metadata = {
-  title: "Custom order",
-  description:
-    "Request a proof and price for a custom laser-cut or engraved wood piece from Daly Creation.",
-};
+export const metadata = pageMetadata({
+  "title": "Custom Laser Engraving & Cutting Quotes",
+  "description": "Request a proof and price for a custom laser-cut or engraved piece from Daly Creation in Minnesota. Nothing is charged until you approve.",
+  "path": "/custom"
+});
 
 export default function CustomPage() {
   return (

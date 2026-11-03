@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../lib/seo";
 import Link from "next/link";
 import { site } from "../../lib/site";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Daly Creation is a Minnesota laser engraving and laser cutting shop for custom wood panels, signs, and commissions.",
-};
+export const metadata = pageMetadata({
+  "title": "About Our Minnesota Laser Engraving Shop",
+  "description": "Meet Daly Creation, a Minnesota shop making custom laser-cut wood panels, signs, engraved gifts, and commissions with a proof before cutting.",
+  "path": "/about"
+});
 
 export default function AboutPage() {
   return (

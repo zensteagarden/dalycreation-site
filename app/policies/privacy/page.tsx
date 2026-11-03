@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../../lib/seo";
 import { site } from "../../../lib/site";
 
-export const metadata: Metadata = {
-  title: "Privacy policy",
-};
+export const metadata = pageMetadata({
+  "title": "Privacy Policy",
+  "description": "Read how Daly Creation handles quote requests, order information, payment details, and questions about your personal data.",
+  "path": "/policies/privacy"
+});
 
 export default function PrivacyPolicyPage() {
   return (

@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../lib/seo";
 import { products } from "../../lib/products";
 import { ProductCard } from "../../components/ProductCard";
 
-export const metadata: Metadata = {
-  title: "Shop",
-  description:
-    "Engraved wood coasters, gifts, and custom pieces from Daly Creation.",
-};
+export const metadata = pageMetadata({
+  "title": "Shop Engraved Wood Gifts & Custom Signs",
+  "description": "Browse engraved wood coaster sets, turquoise inlay gifts, custom LED signs, and cutting boards made by Daly Creation in Minnesota.",
+  "path": "/shop"
+});
 
 export default async function ShopPage({
   searchParams,

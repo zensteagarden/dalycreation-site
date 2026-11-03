@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../lib/seo";
 import Link from "next/link";
 import { site } from "../../lib/site";
 
-export const metadata: Metadata = {
-  title: "FAQ",
-  description:
-    "Shipping, turnaround, proofs, and ordering questions for Daly Creation laser-cut wood.",
-};
+export const metadata = pageMetadata({
+  "title": "Ordering, Proofs & Shipping FAQ",
+  "description": "Find answers about Daly Creation orders, design proofs, custom wood pieces, payment, turnaround, and US shipping.",
+  "path": "/faq"
+});
 
 const faqs = [
   {

@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../../lib/seo";
 import { site } from "../../../lib/site";
 
-export const metadata: Metadata = {
-  title: "Shipping policy",
-};
+export const metadata = pageMetadata({
+  "title": "Shipping Information",
+  "description": "Read Daly Creation's shipping outline for orders made in Minnesota, custom-piece estimates, packing, and local pickup inquiries.",
+  "path": "/policies/shipping"
+});
 
 export default function ShippingPolicyPage() {
   return (

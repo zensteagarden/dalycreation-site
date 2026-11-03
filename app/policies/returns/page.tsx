@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../../lib/seo";
 import { site } from "../../../lib/site";
 
-export const metadata: Metadata = {
-  title: "Returns policy",
-};
+export const metadata = pageMetadata({
+  "title": "Returns & Order Support",
+  "description": "Read Daly Creation's draft returns policy for custom pieces, proof errors, and shipping damage. Contact the shop with order questions.",
+  "path": "/policies/returns"
+});
 
 export default function ReturnsPolicyPage() {
   return (

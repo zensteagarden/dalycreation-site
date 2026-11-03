@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../../lib/seo";
 import Link from "next/link";
 import { site } from "../../lib/site";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `Contact Daly Creation at ${site.email} for laser-cut wood quotes and orders.`,
-};
+export const metadata = pageMetadata({
+  "title": "Contact the Shop",
+  "description": "Contact Daly Creation for custom laser engraving quotes, order questions, proofs, and prices. Email hello@dalycreation.com.",
+  "path": "/contact"
+});
 
 export default function ContactPage() {
   return (

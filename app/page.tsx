@@ -1,4 +1,12 @@
 import Link from "next/link";
+import { pageMetadata } from "../lib/seo";
+import { JsonLd } from "../components/JsonLd";
+
+export const metadata = pageMetadata({
+  title: "Custom Laser Engraving in Minnesota",
+  description: "Shop engraved wood gifts or request custom laser-cut panels, signs, and commissions from Daly Creation in Minnesota. Approve your proof before cutting.",
+  path: "/",
+});
 import { products } from "../lib/products";
 import { ProductCard } from "../components/ProductCard";
 import { site } from "../lib/site";
@@ -8,6 +16,13 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url, email: site.email },
+          { "@type": "WebSite", "@id": `${site.url}/#website`, name: site.name, url: site.url, publisher: { "@id": `${site.url}/#organization` } },
+        ],
+      }} />
       <section className="hero">
         <div className="wrap">
           <h1>Light, cut into wood.</h1>
